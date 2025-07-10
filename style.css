@@ -1,59 +1,134 @@
-/* Font and layout */
-body {
-  font-family: 'Georgia', 'Helvetica Neue', sans-serif;
-  background: #ffffff;
-  color: #111;
+/* Reset and base */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-main {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+:root {
+  --primary-color: #9b7bc0;     /* Pastel purple */
+  --primary-dark: #7a5ca1;      /* Darker purple for hover */
+  --background: #f9f7fc;        /* Very light pastel purple-ish background */
+  --text-color: #333;           /* Main text color */
+  --link-color: var(--primary-color);
+  --link-hover: var(--primary-dark);
+  --border-color: #d6cdea;      /* Soft purple border */
+  --section-bg: #fff;           /* White background for sections */
+  --shadow: rgba(155, 123, 192, 0.2);
+}
+
+/* Body and layout */
+body {
+  background-color: var(--background);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 h1 {
   font-size: 2.5rem;
-  color: #111;
-  margin-bottom: 0;
 }
 
 h2 {
-  font-weight: normal;
-  color: #555;
-  margin-top: 0.2rem;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 h3 {
-  margin-top: 2rem;
-  font-size: 1.4rem;
-  color: #2dc0c5; /* Deezer teal */
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-ul {
-  padding-left: 1.2rem;
-}
-
+/* Links */
 a {
-  color: #ef5466; /* Deezer coral */
+  color: var(--link-color);
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
+
 a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
-img.profile {
-  width: 130px;
-  border-radius: 100px;
-  float: right;
-  margin: 0 0 1rem 1rem;
+/* Sections */
+section {
+  background-color: var(--section-bg);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+  border: 1px solid var(--border-color);
 }
 
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 3rem;
+/* Lists */
+ul {
+  margin-top: 0.75rem;
+  margin-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons (if any) */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Images (profile pic) */
+img.profile-pic {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  img.profile-pic {
+    width: 120px;
+    height: 120px;
+  }
 }
