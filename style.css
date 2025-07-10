@@ -1,24 +1,59 @@
+/* Font and layout */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  padding: 2em;
+  font-family: 'Georgia', 'Helvetica Neue', sans-serif;
+  background: #ffffff;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
-.container {
+
+main {
   max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
-h1, h2 {
-  color: #004080;
+
+h1 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 0;
 }
+
+h2 {
+  font-weight: normal;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #2dc0c5; /* Deezer teal */
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
 a {
-  color: #0066cc;
+  color: #ef5466; /* Deezer coral */
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+
+img.profile {
+  width: 130px;
+  border-radius: 100px;
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 3rem;
 }
